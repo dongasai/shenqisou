@@ -1,22 +1,12 @@
 
 FROM php:8.1.21-apache
 
-ENV REFRESH_DATE 5
+ENV REFRESH_DATE 7
 
-
-#RUN echo "deb https://mirrors.aliyun.com/debian/ bookworm main non-free contrib" > /etc/apt/sources.list && \
-#    echo "deb-src https://mirrors.aliyun.com/debian/ bookworm main non-free contrib " >> /etc/apt/sources.list  && \
-#    echo "deb https://mirrors.aliyun.com/debian-security/ bookworm-security main " >> /etc/apt/sources.list && \
-#    echo "deb-src https://mirrors.aliyun.com/debian-security/ bookworm-security main " >> /etc/apt/sources.list && \
-#    echo "deb https://mirrors.aliyun.com/debian/ bookworm-updates main non-free contrib " >> /etc/apt/sources.list && \
-#    echo "deb-src https://mirrors.aliyun.com/debian/ bookworm-updates main non-free contrib " >> /etc/apt/sources.list  && \
-#    echo "deb https://mirrors.aliyun.com/debian/ bookworm-backports main non-free contrib " >> /etc/apt/sources.list  && \
-#    echo "deb-src https://mirrors.aliyun.com/debian/ bookworm-backports main non-free contrib" >> /etc/apt/sources.list
-#
 
 RUN apt-get update
-RUN apt-get install -y wget zip libzip-dev zlib1g-dev autoconf automake libtool
-RUN apt-get install -y vim git
+RUN apt-get install -y wget zip libzip-dev zlib1g-dev autoconf automake libtool vim git
+
 
 WORKDIR /home
 # 安装 oniguruma

@@ -5,10 +5,10 @@ networks:
 services:
   dev:
     build: .
-    image: jiazhengdcat:v2
+    image: shenqisou:l9
     privileged: false
     restart: unless-stopped
-    container_name: jiazhengdct
+    container_name: shenqisou
     volumes:
     - .:/var/www/html
 #    - ./crontab.bak.temp:/var/spool/cron/crontabs/root
@@ -16,20 +16,8 @@ services:
 #    - ./storage:/var/www/html/storage
     tty: true
     environment:
-    - VIRTUAL_HOST=jiazhengphp.local.xiaobei.fun
-    ports:
-      - 32803:80
+    - VIRTUAL_HOST=shenqisou.local.xiaobei.fun
+    expose:
+      - 80
     networks:
         - ggggg
-  unoconv:
-    image: zrrrzzt/docker-unoconv-webservice
-    privileged: false
-    restart: unless-stopped
-    container_name: jzunoconv
-    environment:
-      - VIRTUAL_HOST=jzunoconv.local.xiaobei.fun
-      - PAYLOAD_MAX_SIZE=22048576
-    ports:
-      - 32804:3000
-    networks:
-      - ggggg

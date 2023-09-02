@@ -1,11 +1,9 @@
 {
-    "name": "laravel/laravel",
+    "name": "dongasai/shenqisou",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
+    "description": "shenqisou",
     "require": {
-        "php": "^8.0.2",
+        "php": "8.1.*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
