@@ -1,0 +1,35 @@
+version: '2.2'
+networks:
+    ggggg:
+        external: true
+services:
+  dev:
+    build: .
+    image: jiazhengdcat:v2
+    privileged: false
+    restart: unless-stopped
+    container_name: jiazhengdct
+    volumes:
+    - .:/var/www/html
+#    - ./crontab.bak.temp:/var/spool/cron/crontabs/root
+#    volumes:
+#    - ./storage:/var/www/html/storage
+    tty: true
+    environment:
+    - VIRTUAL_HOST=jiazhengphp.local.xiaobei.fun
+    ports:
+      - 32803:80
+    networks:
+        - ggggg
+  unoconv:
+    image: zrrrzzt/docker-unoconv-webservice
+    privileged: false
+    restart: unless-stopped
+    container_name: jzunoconv
+    environment:
+      - VIRTUAL_HOST=jzunoconv.local.xiaobei.fun
+      - PAYLOAD_MAX_SIZE=22048576
+    ports:
+      - 32804:3000
+    networks:
+      - ggggg
