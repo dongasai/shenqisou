@@ -69,6 +69,16 @@ class Bt extends Model
         return 'id';
     }
 
+    /**
+     * 确定模型是否可搜索
+     *
+     * @return bool
+     */
+    public function shouldBeSearchable()
+    {
+        return true;
+    }
+
 
 
 

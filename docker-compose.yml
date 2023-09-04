@@ -17,7 +17,7 @@ services:
     tty: true
     environment:
     - VIRTUAL_HOST=shenqisou.local.xiaobei.fun
-    expose:
-      - 80
+    ports:
+      - 31739:80
     networks:
         - ggggg
