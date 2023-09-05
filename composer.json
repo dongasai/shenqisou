@@ -36,6 +36,9 @@
         }
     },
     "scripts": {
+        "ss": [
+            "php artisan search:sync"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
