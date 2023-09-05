@@ -28,16 +28,11 @@ class BtController extends AdminController
 
         return Grid::make(new BtSearch(), function (Grid $grid) {
 
-            $search = $grid->getRequestInput('search');
 
-
-            if($search){
-//                $grid->model();
-               $grid->model()->search($search);
-            }
             $grid->column('id');
 
             $grid->column('name');
+            $grid->column('infohash')->copyable();
 
             $grid->filter(function (Grid\Filter $filter){
 
@@ -45,7 +40,6 @@ class BtController extends AdminController
                 $filter->expand();
                 $filter->where('search',function (Builder $q){
 //                    dump(func_get_args());
-
                 });
             });
 
