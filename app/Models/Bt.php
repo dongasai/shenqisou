@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  *
  * php artisan scout:import "App\Models\Bt"
+ *
  */
 class Bt extends Model
 {

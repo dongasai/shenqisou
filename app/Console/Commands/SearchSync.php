@@ -31,7 +31,7 @@ class SearchSync extends Command
     {
         $time = Carbon::now()->addMinutes(-70);
 //        dump($time);
-        Bt::query()->where('time','>',$time)->searchable();
+        Bt::query()->where('lasttime','>',$time)->searchable();
 
         return Command::SUCCESS;
     }
