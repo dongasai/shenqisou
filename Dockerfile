@@ -76,7 +76,7 @@ RUN chmod 777 -R bootstrap
 
 #USER php
 RUN composer install
-
+RUN echo "APP_KEY=" > /var/www/html/.env
 WORKDIR /var/www/html
 
 
