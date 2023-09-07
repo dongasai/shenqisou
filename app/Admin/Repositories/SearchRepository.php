@@ -2,6 +2,7 @@
 
 namespace App\Admin\Repositories;
 
+use App\Helper\Search;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Repositories\EloquentRepository;
 
@@ -21,8 +22,8 @@ class SearchRepository extends EloquentRepository
 
 //        dump($search,$this->eloquentClass);
         if($search){
-            $ids = $this->eloquentClass::search($search)->paginate(9999,'a',1)->pluck('id');
-//            dd($ids);
+            //            dd($ids);
+            $ids= Search::query($this->eloquentClass,$search);
             if(!$ids){
                 $ids = [-1];
             }

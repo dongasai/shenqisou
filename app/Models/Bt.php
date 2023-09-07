@@ -17,8 +17,15 @@ use Illuminate\Database\Eloquent\Model;
 class Bt extends Model
 {
     use HasFactory;
-    protected $table='bt';
+
+    protected $table = 'bt';
     use \Laravel\Scout\Searchable;
+
+
+    public function tag()
+    {
+        return $this->hasOne(BtTags::class,'bid','id');
+    }
 
     /**
      * 获取与模型关联的索引的名称。
@@ -29,7 +36,6 @@ class Bt extends Model
     {
         return 'ttt_index';
     }
-
 
 
     /**
@@ -44,8 +50,8 @@ class Bt extends Model
         // 自定义数据数组...
 
         return [
-            'name'=>$this->name,
-            'id'=>$this->id
+            'name' => $this->name,
+            'id'   => $this->id
         ];
     }
 
@@ -79,9 +85,6 @@ class Bt extends Model
     {
         return true;
     }
-
-
-
 
 
 }
