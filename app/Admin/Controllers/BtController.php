@@ -42,14 +42,29 @@ class BtController extends AdminController
             $grid->column('length')->display(function ($filesize){
                 return File::sizecount($filesize);
             })->sortable();
-            $grid->column('hot');
-            $grid->column('keywords');
+            $grid->column('hot')->sortable();
+//            $grid->column('keywords');
             $grid->column('hits');
 
             $grid->filter(function (Grid\Filter $filter){
 
                 $filter->panel();
                 $filter->expand();
+                $filter->equal('id');
+                $filter->where('length',function (Builder $q){
+                    $min = $this->input * 1024*1024;
+                    $max = ($this->input + 1) * 1024*1024;
+//                    dd(func_get_args(),$min);
+                        return  $q->whereBetween('length',[$min,$max]);
+                },'大小MB');
+
+                $filter->where('length2',function (Builder $q){
+                    $min = ($this->input-0.1) * 1024*1024*1024;
+                    $max = ($this->input + 0.1) * 1024*1024*1024;
+//                    dd(func_get_args(),$min);
+                    return  $q->whereBetween('length',[$min,$max]);
+                },'大小GB');
+
                 $filter->where('search',function (Builder $q){
 //                    dump(func_get_args());
                 });

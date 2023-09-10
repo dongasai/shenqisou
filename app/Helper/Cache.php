@@ -19,7 +19,7 @@ class Cache
      */
     static public function cacheCall($key, callable $callable, $param_arr, $exp = 60)
     {
-        $key = md5(serialize($key));
+        $key = md5(serialize($key).$exp);
         $old = \Illuminate\Support\Facades\Cache::get($key);
         if (!is_null($old)) {
             return $old;
