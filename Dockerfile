@@ -51,11 +51,11 @@ RUN a2enmod rewrite;
 RUN apt install -y cron
 #复制cron配置文件到crontab中
 ## Copy cron file to the cron.d directory
-COPY crontab.bak /etc/cron.d/cronla
+COPY crontab.bak /var/spool/cron/crontabs/www-data
 ## Give execution rights on the cron job
-RUN chmod 0644 /etc/cron.d/cronla
+RUN chmod 0644 /var/spool/cron/crontabs/www-data
 
-RUN crontab /etc/cron.d/cronla
+RUN crontab /var/spool/cron/crontabs/www-data
 
 RUN mkdir -p /var/log/cron
 
@@ -76,7 +76,7 @@ RUN chmod 777 -R bootstrap
 
 #USER php
 RUN composer install
-RUN echo "APP_KEY=" > /var/www/html/.env
+
 WORKDIR /var/www/html
 
 
