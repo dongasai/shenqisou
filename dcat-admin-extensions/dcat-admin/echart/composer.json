@@ -1,0 +1,32 @@
+{
+    "name": "dcat-admin/echart",
+    "alias": "",
+    "description": "echat 图表",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/dcat-admin/echart",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dongasai",
+            "email": "1514582970@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DcatAdmin\\Echart\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "DcatAdmin\\Echart\\EchartServiceProvider",
+        "laravel": {
+            "providers": [
+                "DcatAdmin\\Echart\\EchartServiceProvider"
+            ]
+        }
+    }
+}
