@@ -17,6 +17,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->command('search:sync')->hourly();
+        $schedule->command('search:syncm')->everyMinute();
+
 //        date_default_timezone_set();
     }
 

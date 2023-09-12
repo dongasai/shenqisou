@@ -7,12 +7,12 @@ use Dcat\Admin\Admin;
 
 class EchartServiceProvider extends ServiceProvider
 {
-	protected $js = [
-        'js/index.js',
-    ];
-	protected $css = [
-		'css/index.css',
-	];
+//	protected $js = [
+//        'js/index.js',
+//    ];
+//	protected $css = [
+//		'css/index.css',
+//	];
 
 	public function register()
 	{
@@ -24,7 +24,7 @@ class EchartServiceProvider extends ServiceProvider
 		parent::init();
 
 		//
-		
+
 	}
 
 	public function settingForm()
