@@ -76,7 +76,7 @@ RUN chmod 777 -R storage
 RUN chmod 777 -R bootstrap
 
 #USER www-data
-#RUN composer install
+RUN composer install
 
 WORKDIR /var/www/html
 
