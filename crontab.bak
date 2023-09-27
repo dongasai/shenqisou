@@ -49,4 +49,4 @@
 #
 # m h  dom mon dow   command
 */1 * * * * curl http://127.0.0.1/index
-* * * * * cd /var/www/html && /usr/local/bin/php artisan schedule:run >> /var/www/html/storage/logs/cron.log 2>&1
+* * * * * www-data cd /var/www/html && /usr/local/bin/php artisan schedule:run >> /var/www/html/storage/logs/cron.log 2>&1
