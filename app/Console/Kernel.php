@@ -16,7 +16,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        // 每小时同步到搜索引擎
         $schedule->command('search:sync')->hourly();
+        // 每小时清理体质
+        $schedule->command('log:clear 20')->hourly();
         //$schedule->command('search:syncm')->everyMinute();
 
 //        date_default_timezone_set();
