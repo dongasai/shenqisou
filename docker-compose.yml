@@ -7,7 +7,6 @@ services:
     build: .
     image: shenqisou:l9
     privileged: false
-    restart: unless-stopped
     container_name: shenqisou
     volumes:
     - .:/var/www/html
