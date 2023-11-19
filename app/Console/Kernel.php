@@ -19,7 +19,7 @@ class Kernel extends ConsoleKernel
         // 每小时同步到搜索引擎
         $schedule->command('search:sync')->hourly();
         // 每小时清理体质
-        $schedule->command('log:clear 20')->hourly();
+        $schedule->command('log:clear 10')->hourly();
         //$schedule->command('search:syncm')->everyMinute();
 
 //        date_default_timezone_set();
