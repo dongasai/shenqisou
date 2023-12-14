@@ -41,7 +41,7 @@ class Open extends RowAction
         $mt  = "magnet:?xt=urn:btih:{$bt->infohash}"; ;
 //        dump($bt);
         // 返回响应结果并刷新页面
-        return $this->response()->success("成功")->script('window.location.href = "'.$mt.'"; ');
+        return $this->response()->success("成功")->script('window.location.href = "'.$mt.'"; window.location.reload();');
     }
 
 
