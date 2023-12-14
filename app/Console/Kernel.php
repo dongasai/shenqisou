@@ -20,6 +20,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('search:sync')->hourly();
         // 每小时清理体质
         $schedule->command('log:clear 10')->hourly();
+        // 降低热度,每天 02.00 执行
+        $schedule->command('btcall:reduce_hot')->dailyAt('02:00');
+
         //$schedule->command('search:syncm')->everyMinute();
 
 //        date_default_timezone_set();

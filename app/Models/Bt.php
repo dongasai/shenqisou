@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property int $id
  * @property int $name
- *
- *
+ * @property int $length 文件总大小
+ * @property int $hot 热度
  * php artisan scout:import "App\Models\Bt"
  *
  */
@@ -22,6 +22,7 @@ class Bt extends Model
     use \Laravel\Scout\Searchable;
 
 
+    public $timestamps = false;
     public function tag()
     {
         return $this->hasOne(BtTags::class,'bid','id');
@@ -45,12 +46,11 @@ class Bt extends Model
      */
     public function toSearchableArray()
     {
-        $array = $this->toArray();
-
-        // 自定义数据数组...
 
         return [
             'name' => $this->name,
+            'size' => $this->length,
+            'hot' => $this->hot,
             'id'   => $this->id
         ];
     }
