@@ -14,5 +14,6 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
     $router->resource('bt', 'BtController');
+    $router->get('/dev/config', 'DevController@config');
 
 });
