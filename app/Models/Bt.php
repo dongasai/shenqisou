@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helper\File;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -50,6 +51,7 @@ class Bt extends Model
         return [
             'name' => $this->name,
             'size' => $this->length,
+            'size2' => File::sizecount($this->length) ,
             'hot' => $this->hot,
             'id'   => $this->id
         ];

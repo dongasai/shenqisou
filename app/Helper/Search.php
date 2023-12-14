@@ -14,7 +14,7 @@ class Search
     {
         return Cache::cacheCall([__CLASS__, __FILE__, $model, $q], function ($model, $search) {
             return $model::search($search)->paginate(9999, 'a', 1)->pluck('id');
-        }, [$model, $q], 60);
+        }, [$model, $q], 600);
     }
 
 }

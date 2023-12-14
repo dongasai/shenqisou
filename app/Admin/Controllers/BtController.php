@@ -6,6 +6,7 @@ namespace App\Admin\Controllers;
 
 
 
+use App\Admin\Actions\bt\Open;
 use App\Admin\Actions\Grid\EditTag;
 use App\Admin\Repositories\Bt;
 
@@ -74,6 +75,8 @@ class BtController extends AdminController
                 $actions->disableEdit();
                 $actions->disableView();
                 $actions->append(new EditTag());
+                $actions->append(new Open());
+
             });
 
         });
