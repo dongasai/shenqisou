@@ -40,7 +40,7 @@
             "php artisan search:sync"
         ],
         "demo1": [
-            "php artisan  btcall:reduce_hot"
+            "php artisan  docker:buildinfo"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
