@@ -1,9 +1,9 @@
 
-FROM php:8.1-apache
+FROM php:8.1.26-apache
 
 ENV REFRESH_DATE 8
 #COPY sources.list /etc/apt/sources.list
-RUN apt-get update -y
+RUN apt-get clean &&  apt-get update
 RUN apt-get install -y wget zip libzip-dev zlib1g-dev autoconf automake libtool vim git iputils-ping
 
 
