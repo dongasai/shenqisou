@@ -32,7 +32,7 @@ class BtController extends AdminController
         return Grid::make(new BtSearch(), function (Grid $grid) {
 //            $grid-
             $grid->model()->with(['tag']);
-            $grid->column('id');
+            $grid->column('id','ID1')->sortable();
 
             $grid->column('name')->width(400);
             $grid->column('tag.tags')->label()->width(200);
