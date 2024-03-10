@@ -75,8 +75,6 @@ COPY . /var/www/html
 RUN chmod 777 -R storage
 RUN chmod 777 -R bootstrap
 
-#USER www-data
-RUN composer install
 
 WORKDIR /var/www/html
 RUN php artisan  docker:buildinfo
