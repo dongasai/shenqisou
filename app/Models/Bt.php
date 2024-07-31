@@ -39,6 +39,25 @@ class Bt extends Model
         return 'ttt_index';
     }
 
+    public function scoutIndexMigration(): array
+    {
+        return [
+            'fields' => [
+                'id' => ['type' => 'bigint'],
+                'name' => ['type' => 'text'],
+                'size' => ['type' => 'bigint'],// string|text [stored|attribute] [indexed]
+                'size2' => ['type' => 'string'],
+                'hot' => ['type' => 'bigint'],
+            ],
+            'settings' => [
+                'min_prefix_len' => '3',
+                'min_infix_len' => '3',
+                'prefix_fields' => 'name',
+                'expand_keywords' => '1',
+                //'engine' => 'columnar', // [default] row-wise - traditional storage available in Manticore Search out of the box; columnar - provided by Manticore Columnar Library
+            ],
+        ];
+    }
 
     /**
      * 获取模型的可索引的数据。

@@ -544,6 +544,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'manticoresoftware/manticoresearch-php' => array(
+            'pretty_version' => '3.1.0',
+            'version' => '3.1.0.0',
+            'reference' => 'a04f9cd56a64aab6a4089f663c03d5400097daa4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../manticoresoftware/manticoresearch-php',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'meilisearch/meilisearch-php' => array(
             'pretty_version' => 'v1.3.0',
             'version' => '1.3.0.0',
@@ -850,8 +859,8 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-factory' => array(
@@ -866,9 +875,9 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
-                2 => '^1.0',
+                0 => '1.0',
+                1 => '^1.0',
+                2 => '*',
             ),
         ),
         'psr/http-message' => array(
@@ -883,8 +892,8 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '*',
-                1 => '1.0',
+                0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/log' => array(
@@ -899,8 +908,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -959,6 +968,15 @@
             'replaced' => array(
                 0 => '4.7.4',
             ),
+        ),
+        'romanstruk/manticore-scout-engine' => array(
+            'pretty_version' => '5.6.3',
+            'version' => '5.6.3.0',
+            'reference' => '09efa33b82d5ee0f8f0f1c8445d7185f485f68d6',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../romanstruk/manticore-scout-engine',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '1.0.1',

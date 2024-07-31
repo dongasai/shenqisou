@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92eaebd152d66724efdfe27008cc5690",
+    "content-hash": "c62460a64ddaa9d7639fd996f00f9606",
     "packages": [
         {
             "name": "brick/math",
@@ -2255,6 +2255,62 @@
             "time": "2023-08-05T12:09:49+00:00"
         },
         {
+            "name": "manticoresoftware/manticoresearch-php",
+            "version": "3.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/manticoresoftware/manticoresearch-php/3.1.0/manticoresoftware-manticoresearch-php-3.1.0.zip",
+                "reference": "a04f9cd56a64aab6a4089f663c03d5400097daa4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.1",
+                "psr/log": ">=1.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "*",
+                "phpunit/phpunit": ">=7.5",
+                "squizlabs/php_codesniffer": ">=3.5"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "guzzlehttp/psr7": ">=1.6",
+                "monolog/monolog": "*",
+                "php-http/curl-client": ">=1.7",
+                "php-http/httplug": "^1.1",
+                "php-http/message": "^1.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Manticoresearch\\": "src/Manticoresearch/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Manticore Software",
+                    "email": "contact@manticoresearch.com",
+                    "homepage": "https://manticoresearch.com/"
+                },
+                {
+                    "name": "Adrian Nuta",
+                    "email": "adriannuta@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Client for Manticore Search",
+            "keywords": [
+                "client",
+                "manticoresearch",
+                "search"
+            ],
+            "time": "2023-09-15T10:43:57+00:00"
+        },
+        {
             "name": "meilisearch/meilisearch-php",
             "version": "v1.3.0",
             "source": {
@@ -3888,6 +3944,54 @@
                 }
             ],
             "time": "2023-04-15T23:01:58+00:00"
+        },
+        {
+            "name": "romanstruk/manticore-scout-engine",
+            "version": "5.6.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/romanstruk/manticore-scout-engine/5.6.3/romanstruk-manticore-scout-engine-5.6.3.zip",
+                "reference": "09efa33b82d5ee0f8f0f1c8445d7185f485f68d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "illuminate/support": "~9|~10",
+                "laravel/scout": "^9.5|^10.0",
+                "manticoresoftware/manticoresearch-php": "^2.2|^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "v6.x-dev",
+                "nunomaduro/phpinsights": "dev-master",
+                "orchestra/testbench": "^8.5.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "RomanStruk\\ManticoreScoutEngine\\ManticoreServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RomanStruk\\ManticoreScoutEngine\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman",
+                    "email": "romanuch4@gmail.com"
+                }
+            ],
+            "description": "Laravel Manticore Scout Engine",
+            "time": "2024-03-20T11:44:48+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
