@@ -1,8 +1,8 @@
 <?php 
  return array (
-  'time' => 1702554381,
-  'systemInfo' => 'Linux e7d14a9a5655 6.4.16-linuxkit #1 SMP PREEMPT_DYNAMIC Thu Nov 16 10:55:59 UTC 2023 x86_64',
+  'time' => 1734508704,
+  'systemInfo' => 'Linux 675d92cccced 6.8.0-49-generic #49~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Nov  6 17:42:15 UTC 2 x86_64',
   'SERVER_SOFTWARE' => '',
   'envos' => false,
-  'unamea' => 'Linux e7d14a9a5655 6.4.16-linuxkit #1 SMP PREEMPT_DYNAMIC Thu Nov 16 10:55:59 UTC 2023 x86_64 GNU/Linux',
+  'unamea' => 'Linux 675d92cccced 6.8.0-49-generic #49~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Nov  6 17:42:15 UTC 2 x86_64 GNU/Linux',
 ) ;

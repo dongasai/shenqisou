@@ -77,7 +77,7 @@ RUN chmod 777 -R bootstrap
 
 
 WORKDIR /var/www/html
-RUN php artisan  docker:buildinfo
+#RUN php artisan  docker:buildinfo
 
 
 RUN sed -i 's/^exec /service cron start \n\n exec /' /usr/local/bin/apache2-foreground
