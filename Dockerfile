@@ -1,5 +1,5 @@
 
-FROM php:8.1.32-apache
+FROM php:8.1.31-apache
 
 ENV REFRESH_DATE 8
 #COPY sources.list /etc/apt/sources.list
