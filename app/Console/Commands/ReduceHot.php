@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Bt;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Log\Logger;
 
 /**
  * 降低热度
@@ -63,6 +64,7 @@ class ReduceHot extends Command
                 $re = Bt::query()->whereBetween('hot', [
                     $item['max'], $level[$k + 1]['max']
                 ])->decrement('hot', $item['dec']);
+//                Logger::info("");
 
             } else {
                 $re = Bt::query()->where('hot', '>', $item['max'])

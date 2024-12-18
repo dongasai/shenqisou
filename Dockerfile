@@ -1,5 +1,5 @@
 
-FROM php:8.1.26-apache
+FROM php:8.1.32-apache
 
 ENV REFRESH_DATE 8
 #COPY sources.list /etc/apt/sources.list
@@ -40,7 +40,7 @@ RUN apt-get install -y zlib1g-dev libz-dev libfreetype6-dev libjpeg62-turbo-dev 
     docker-php-ext-install gd &&  docker-php-ext-enable  gd
 
 
-RUN docker-php-ext-install opcache &&  docker-php-ext-enable  opcache
+# RUN docker-php-ext-install opcache &&  docker-php-ext-enable  opcache
 
 
 # 安装composer
